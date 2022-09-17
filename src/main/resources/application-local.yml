@@ -1,0 +1,12 @@
+goorange:
+  registry: "consul"
+  configuration:
+    enabled: false
+  auth:
+    enabled: false
+    spring:
+      enable-global-method-security: false
+  service-identity:
+    enabled: false
+
+#metadataPort: ${random.int[1024,65535]}

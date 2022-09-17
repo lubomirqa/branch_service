@@ -1,0 +1,92 @@
+plugins {
+    id "java"
+    id "idea"
+    id "org.springframework.boot" version "2.5.8"
+}
+repositories {
+    mavenCentral()
+    maven { url "https://nexus.goorange.sixt.com/nexus/content/groups/public/" }
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+group = "com.sixt.service"
+
+dependencies {
+    implementation platform("org.springframework.boot:spring-boot-dependencies:2.5.11")
+    implementation "com.sixt.lib:spring-boot-starter-sixtgoorange:7.1.8"
+    implementation "com.sixt.lib:service-registry-java:1.+"
+}
+
+bootJar {
+    manifest {
+        attributes "Service-Title": "${project.group}.${project.name}",
+                "Service-Version": project.version,
+                "Implementation-Title": "${project.group}.${project.name}",
+                "Implementation-Version": project.version,
+                "Service-Vendor": "Sixt GmbH & Co. Autovermietung KG"
+    }
+}
+
+/**
+ * Protobuf build
+ */
+configurations { protoc }
+dependencies {
+    protoc group: "com.sixt.protobuf", name: "protoc", version: "3.10.1", ext: "exe",
+            classifier: [
+                    "Windows:amd64"  : "windows-x86_64",
+                    "Windows:i386"   : "windows-x86_32",
+                    "Linux:amd64"    : "linux-x86_64",
+                    "Linux:i386"     : "linux-x86_32",
+                    "Mac OS X:amd64" : "osx-x86_64",
+                    "Mac OS X:x86_64": "osx-x86_64",
+                    "Mac OS X:aarch64": "osx-x86_64",
+            ]["${System.getProperty('os.name').toLowerCase().contains('windows') ? 'Windows' : System.getProperty('os.name')}:${System.getProperty('os.arch')}"]
+}
+
+// Custom task that generates protobuf code in the build directory and adds it to the classpath
+task proto(type: Exec) {
+    dependsOn configurations.protoc
+    sourceSets.main.java.srcDir file("${buildDir}/proto")
+    def file = configurations.protoc.singleFile
+    if (!file.canExecute() && !file.setExecutable(true)) {
+        throw new GradleException("Cannot set ${file} as executable")
+    }
+    doFirst { mkdir "${buildDir}/proto" }
+    // Actual command line to protoc with all required options
+    commandLine file.getAbsolutePath(),
+            "-I.",
+            "--java_out=${buildDir}/proto",
+            "github.com/Sixt/com.sixt.service.branch/proto/branch.proto@latest",
+            "github.com/Sixt/com.sixt.service.branch/proto/address.proto@latest",
+            "github.com/Sixt/com.sixt.service.branch/proto/search_online.proto@latest"
+}
+
+task generatePersistenceProto() {
+    dependsOn configurations.protoc
+    doLast {
+        execProtoCompilerCommand()
+    }
+}
+
+void execProtoCompilerCommand() {
+    def protoExecutable = configurations.protoc.singleFile
+    if (!protoExecutable.canExecute() && !protoExecutable.setExecutable(true)) {
+        throw new GradleException("Cannot set ${protoExecutable} as executable")
+    }
+    FileTree tree = fileTree('src/main/java') {
+        include '**/*.proto'
+    }
+    tree.forEach {File file ->
+        exec {
+            commandLine protoExecutable.getAbsolutePath(),
+                    '--proto_path=' + projectDir + '/src/main/java',
+                    '--java_out=src/main/java',
+                    file.path
+        }
+    }
+}
+
+// Let compileJava always run protoc first
+compileJava.dependsOn(proto)
