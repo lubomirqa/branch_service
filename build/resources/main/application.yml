@@ -1,0 +1,44 @@
+# Server
+server.error.whitelabel.enabled: false
+# Spring actuator
+management:
+  server:
+    port: 8080
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      group:
+        readiness:
+          include: readinessState
+        liveness:
+          include: livenessState
+      probes:
+        enabled: true
+
+# Spring
+spring:
+  application.name: com.sixt.service.branch
+  # Pool size, default: 1. This means only 1 scheduled task can run at the moment. Without parallel execution.
+  # task.scheduling.pool.size: 1
+  main.banner-mode: 'off'
+  aop.proxy-target-class: false
+  jackson:
+    time-zone: UTC
+    visibility.field: ANY
+    property-naming-strategy: LOWER_CAMEL_CASE
+    serialization.write-dates-as-timestamps: false
+    deserialization.fail-on-unknown-properties: false
+
+goorange:
+  http-client:
+    exclude-weak-ciphers: true
+  auth:
+    api-permissions:
+      - "com.sixt.service.charge-packages:charge-packages:get:all"
+      - "com.sixt.service.charge-packages:charge-packages:set:all"
+    spring:
+      enable-global-method-security: false
+  registry: "platform"

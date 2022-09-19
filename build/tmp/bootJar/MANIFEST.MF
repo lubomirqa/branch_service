@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Service-Title: com.sixt.service.branch_service
+Service-Version: unspecified
+Implementation-Title: com.sixt.service.branch_service
+Implementation-Version: unspecified
+Service-Vendor: Sixt GmbH & Co. Autovermietung KG
+
