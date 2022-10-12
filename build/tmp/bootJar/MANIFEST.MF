@@ -1,7 +1,14 @@
 Manifest-Version: 1.0
-Service-Title: com.sixt.service.branch_service
+Service-Title: com.sixt.service.branch
 Service-Version: unspecified
-Implementation-Title: com.sixt.service.branch_service
+Implementation-Title: com.sixt.service.branch
 Implementation-Version: unspecified
 Service-Vendor: Sixt GmbH & Co. Autovermietung KG
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: com.sixt.service.branch.Application
+Spring-Boot-Version: 2.7.2
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Spring-Boot-Layers-Index: BOOT-INF/layers.idx
 

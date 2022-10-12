@@ -22608,6 +22608,30 @@ public final class BranchOuterClass {
      * @return The onlineCheckIn.
      */
     com.sixt.service.branch.api.BranchOuterClass.OnlineCheckInType getOnlineCheckIn();
+
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    java.util.List<com.sixt.service.branch.api.BranchOuterClass.Keybooth> 
+        getKeyboothsList();
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    com.sixt.service.branch.api.BranchOuterClass.Keybooth getKeybooths(int index);
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    int getKeyboothsCount();
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    java.util.List<? extends com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder> 
+        getKeyboothsOrBuilderList();
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder getKeyboothsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code com.sixt.service.branch.BranchObject}
@@ -22640,6 +22664,7 @@ public final class BranchOuterClass {
       googlePlaceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       rateRegion_ = "";
       onlineCheckIn_ = 0;
+      keybooths_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -23025,6 +23050,15 @@ public final class BranchOuterClass {
               onlineCheckIn_ = rawValue;
               break;
             }
+            case 410: {
+              if (!((mutable_bitField0_ & 0x00000400) != 0)) {
+                keybooths_ = new java.util.ArrayList<com.sixt.service.branch.api.BranchOuterClass.Keybooth>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              keybooths_.add(
+                  input.readMessage(com.sixt.service.branch.api.BranchOuterClass.Keybooth.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -23069,6 +23103,9 @@ public final class BranchOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000200) != 0)) {
           googlePlaceIds_ = googlePlaceIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000400) != 0)) {
+          keybooths_ = java.util.Collections.unmodifiableList(keybooths_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -24013,6 +24050,41 @@ public final class BranchOuterClass {
       return result == null ? com.sixt.service.branch.api.BranchOuterClass.OnlineCheckInType.UNRECOGNIZED : result;
     }
 
+    public static final int KEYBOOTHS_FIELD_NUMBER = 51;
+    private java.util.List<com.sixt.service.branch.api.BranchOuterClass.Keybooth> keybooths_;
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    public java.util.List<com.sixt.service.branch.api.BranchOuterClass.Keybooth> getKeyboothsList() {
+      return keybooths_;
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    public java.util.List<? extends com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder> 
+        getKeyboothsOrBuilderList() {
+      return keybooths_;
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    public int getKeyboothsCount() {
+      return keybooths_.size();
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.Keybooth getKeybooths(int index) {
+      return keybooths_.get(index);
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder getKeyboothsOrBuilder(
+        int index) {
+      return keybooths_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24159,6 +24231,9 @@ public final class BranchOuterClass {
       }
       if (onlineCheckIn_ != com.sixt.service.branch.api.BranchOuterClass.OnlineCheckInType.OnlineCheckInTypeNoOnlineCheckIn.getNumber()) {
         output.writeEnum(50, onlineCheckIn_);
+      }
+      for (int i = 0; i < keybooths_.size(); i++) {
+        output.writeMessage(51, keybooths_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -24355,6 +24430,10 @@ public final class BranchOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(50, onlineCheckIn_);
       }
+      for (int i = 0; i < keybooths_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(51, keybooths_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -24468,6 +24547,8 @@ public final class BranchOuterClass {
       if (getHasDiamondLounge()
           != other.getHasDiamondLounge()) return false;
       if (onlineCheckIn_ != other.onlineCheckIn_) return false;
+      if (!getKeyboothsList()
+          .equals(other.getKeyboothsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -24609,6 +24690,10 @@ public final class BranchOuterClass {
           getHasDiamondLounge());
       hash = (37 * hash) + ONLINECHECKIN_FIELD_NUMBER;
       hash = (53 * hash) + onlineCheckIn_;
+      if (getKeyboothsCount() > 0) {
+        hash = (37 * hash) + KEYBOOTHS_FIELD_NUMBER;
+        hash = (53 * hash) + getKeyboothsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24743,6 +24828,7 @@ public final class BranchOuterClass {
           getHintsFieldBuilder();
           getDirectionsFieldBuilder();
           getRegionsFieldBuilder();
+          getKeyboothsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -24884,6 +24970,12 @@ public final class BranchOuterClass {
 
         onlineCheckIn_ = 0;
 
+        if (keyboothsBuilder_ == null) {
+          keybooths_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          keyboothsBuilder_.clear();
+        }
         return this;
       }
 
@@ -25047,6 +25139,15 @@ public final class BranchOuterClass {
         result.deliveryAdvanceBookingTime_ = deliveryAdvanceBookingTime_;
         result.hasDiamondLounge_ = hasDiamondLounge_;
         result.onlineCheckIn_ = onlineCheckIn_;
+        if (keyboothsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            keybooths_ = java.util.Collections.unmodifiableList(keybooths_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.keybooths_ = keybooths_;
+        } else {
+          result.keybooths_ = keyboothsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -25384,6 +25485,32 @@ public final class BranchOuterClass {
         }
         if (other.onlineCheckIn_ != 0) {
           setOnlineCheckInValue(other.getOnlineCheckInValue());
+        }
+        if (keyboothsBuilder_ == null) {
+          if (!other.keybooths_.isEmpty()) {
+            if (keybooths_.isEmpty()) {
+              keybooths_ = other.keybooths_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureKeyboothsIsMutable();
+              keybooths_.addAll(other.keybooths_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.keybooths_.isEmpty()) {
+            if (keyboothsBuilder_.isEmpty()) {
+              keyboothsBuilder_.dispose();
+              keyboothsBuilder_ = null;
+              keybooths_ = other.keybooths_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              keyboothsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getKeyboothsFieldBuilder() : null;
+            } else {
+              keyboothsBuilder_.addAllMessages(other.keybooths_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -29219,6 +29346,246 @@ public final class BranchOuterClass {
         onChanged();
         return this;
       }
+
+      private java.util.List<com.sixt.service.branch.api.BranchOuterClass.Keybooth> keybooths_ =
+        java.util.Collections.emptyList();
+      private void ensureKeyboothsIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          keybooths_ = new java.util.ArrayList<com.sixt.service.branch.api.BranchOuterClass.Keybooth>(keybooths_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.Keybooth, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder, com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder> keyboothsBuilder_;
+
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public java.util.List<com.sixt.service.branch.api.BranchOuterClass.Keybooth> getKeyboothsList() {
+        if (keyboothsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(keybooths_);
+        } else {
+          return keyboothsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public int getKeyboothsCount() {
+        if (keyboothsBuilder_ == null) {
+          return keybooths_.size();
+        } else {
+          return keyboothsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth getKeybooths(int index) {
+        if (keyboothsBuilder_ == null) {
+          return keybooths_.get(index);
+        } else {
+          return keyboothsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder setKeybooths(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Keybooth value) {
+        if (keyboothsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeyboothsIsMutable();
+          keybooths_.set(index, value);
+          onChanged();
+        } else {
+          keyboothsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder setKeybooths(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder builderForValue) {
+        if (keyboothsBuilder_ == null) {
+          ensureKeyboothsIsMutable();
+          keybooths_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          keyboothsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder addKeybooths(com.sixt.service.branch.api.BranchOuterClass.Keybooth value) {
+        if (keyboothsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeyboothsIsMutable();
+          keybooths_.add(value);
+          onChanged();
+        } else {
+          keyboothsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder addKeybooths(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Keybooth value) {
+        if (keyboothsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKeyboothsIsMutable();
+          keybooths_.add(index, value);
+          onChanged();
+        } else {
+          keyboothsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder addKeybooths(
+          com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder builderForValue) {
+        if (keyboothsBuilder_ == null) {
+          ensureKeyboothsIsMutable();
+          keybooths_.add(builderForValue.build());
+          onChanged();
+        } else {
+          keyboothsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder addKeybooths(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder builderForValue) {
+        if (keyboothsBuilder_ == null) {
+          ensureKeyboothsIsMutable();
+          keybooths_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          keyboothsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder addAllKeybooths(
+          java.lang.Iterable<? extends com.sixt.service.branch.api.BranchOuterClass.Keybooth> values) {
+        if (keyboothsBuilder_ == null) {
+          ensureKeyboothsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, keybooths_);
+          onChanged();
+        } else {
+          keyboothsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder clearKeybooths() {
+        if (keyboothsBuilder_ == null) {
+          keybooths_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          keyboothsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public Builder removeKeybooths(int index) {
+        if (keyboothsBuilder_ == null) {
+          ensureKeyboothsIsMutable();
+          keybooths_.remove(index);
+          onChanged();
+        } else {
+          keyboothsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder getKeyboothsBuilder(
+          int index) {
+        return getKeyboothsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder getKeyboothsOrBuilder(
+          int index) {
+        if (keyboothsBuilder_ == null) {
+          return keybooths_.get(index);  } else {
+          return keyboothsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public java.util.List<? extends com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder> 
+           getKeyboothsOrBuilderList() {
+        if (keyboothsBuilder_ != null) {
+          return keyboothsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(keybooths_);
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder addKeyboothsBuilder() {
+        return getKeyboothsFieldBuilder().addBuilder(
+            com.sixt.service.branch.api.BranchOuterClass.Keybooth.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder addKeyboothsBuilder(
+          int index) {
+        return getKeyboothsFieldBuilder().addBuilder(
+            index, com.sixt.service.branch.api.BranchOuterClass.Keybooth.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Keybooth keybooths = 51;</code>
+       */
+      public java.util.List<com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder> 
+           getKeyboothsBuilderList() {
+        return getKeyboothsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.Keybooth, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder, com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder> 
+          getKeyboothsFieldBuilder() {
+        if (keyboothsBuilder_ == null) {
+          keyboothsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sixt.service.branch.api.BranchOuterClass.Keybooth, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder, com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder>(
+                  keybooths_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          keybooths_ = null;
+        }
+        return keyboothsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29267,6 +29634,2308 @@ public final class BranchOuterClass {
 
     @java.lang.Override
     public com.sixt.service.branch.api.BranchOuterClass.BranchObject getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeyboothOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.sixt.service.branch.Keybooth)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+     * @return Whether the openingHours field is set.
+     */
+    boolean hasOpeningHours();
+    /**
+     * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+     * @return The openingHours.
+     */
+    com.sixt.service.branch.api.BranchOuterClass.OpeningHours getOpeningHours();
+    /**
+     * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+     */
+    com.sixt.service.branch.api.BranchOuterClass.OpeningHoursOrBuilder getOpeningHoursOrBuilder();
+
+    /**
+     * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+     * @return Whether the addressDetails field is set.
+     */
+    boolean hasAddressDetails();
+    /**
+     * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+     * @return The addressDetails.
+     */
+    com.sixt.service.branch.api.BranchOuterClass.AddressDetails getAddressDetails();
+    /**
+     * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+     */
+    com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder getAddressDetailsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.sixt.service.branch.Keybooth}
+   */
+  public  static final class Keybooth extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.sixt.service.branch.Keybooth)
+      KeyboothOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Keybooth.newBuilder() to construct.
+    private Keybooth(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Keybooth() {
+      id_ = "";
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Keybooth();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Keybooth(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              com.sixt.service.branch.api.BranchOuterClass.OpeningHours.Builder subBuilder = null;
+              if (openingHours_ != null) {
+                subBuilder = openingHours_.toBuilder();
+              }
+              openingHours_ = input.readMessage(com.sixt.service.branch.api.BranchOuterClass.OpeningHours.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(openingHours_);
+                openingHours_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder subBuilder = null;
+              if (addressDetails_ != null) {
+                subBuilder = addressDetails_.toBuilder();
+              }
+              addressDetails_ = input.readMessage(com.sixt.service.branch.api.BranchOuterClass.AddressDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(addressDetails_);
+                addressDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_Keybooth_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_Keybooth_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sixt.service.branch.api.BranchOuterClass.Keybooth.class, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 2;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OPENING_HOURS_FIELD_NUMBER = 3;
+    private com.sixt.service.branch.api.BranchOuterClass.OpeningHours openingHours_;
+    /**
+     * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+     * @return Whether the openingHours field is set.
+     */
+    public boolean hasOpeningHours() {
+      return openingHours_ != null;
+    }
+    /**
+     * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+     * @return The openingHours.
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.OpeningHours getOpeningHours() {
+      return openingHours_ == null ? com.sixt.service.branch.api.BranchOuterClass.OpeningHours.getDefaultInstance() : openingHours_;
+    }
+    /**
+     * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.OpeningHoursOrBuilder getOpeningHoursOrBuilder() {
+      return getOpeningHours();
+    }
+
+    public static final int ADDRESS_DETAILS_FIELD_NUMBER = 4;
+    private com.sixt.service.branch.api.BranchOuterClass.AddressDetails addressDetails_;
+    /**
+     * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+     * @return Whether the addressDetails field is set.
+     */
+    public boolean hasAddressDetails() {
+      return addressDetails_ != null;
+    }
+    /**
+     * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+     * @return The addressDetails.
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.AddressDetails getAddressDetails() {
+      return addressDetails_ == null ? com.sixt.service.branch.api.BranchOuterClass.AddressDetails.getDefaultInstance() : addressDetails_;
+    }
+    /**
+     * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder getAddressDetailsOrBuilder() {
+      return getAddressDetails();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (openingHours_ != null) {
+        output.writeMessage(3, getOpeningHours());
+      }
+      if (addressDetails_ != null) {
+        output.writeMessage(4, getAddressDetails());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (openingHours_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOpeningHours());
+      }
+      if (addressDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getAddressDetails());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sixt.service.branch.api.BranchOuterClass.Keybooth)) {
+        return super.equals(obj);
+      }
+      com.sixt.service.branch.api.BranchOuterClass.Keybooth other = (com.sixt.service.branch.api.BranchOuterClass.Keybooth) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasOpeningHours() != other.hasOpeningHours()) return false;
+      if (hasOpeningHours()) {
+        if (!getOpeningHours()
+            .equals(other.getOpeningHours())) return false;
+      }
+      if (hasAddressDetails() != other.hasAddressDetails()) return false;
+      if (hasAddressDetails()) {
+        if (!getAddressDetails()
+            .equals(other.getAddressDetails())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasOpeningHours()) {
+        hash = (37 * hash) + OPENING_HOURS_FIELD_NUMBER;
+        hash = (53 * hash) + getOpeningHours().hashCode();
+      }
+      if (hasAddressDetails()) {
+        hash = (37 * hash) + ADDRESS_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddressDetails().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sixt.service.branch.api.BranchOuterClass.Keybooth prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.sixt.service.branch.Keybooth}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.sixt.service.branch.Keybooth)
+        com.sixt.service.branch.api.BranchOuterClass.KeyboothOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_Keybooth_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_Keybooth_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sixt.service.branch.api.BranchOuterClass.Keybooth.class, com.sixt.service.branch.api.BranchOuterClass.Keybooth.Builder.class);
+      }
+
+      // Construct using com.sixt.service.branch.api.BranchOuterClass.Keybooth.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        if (openingHoursBuilder_ == null) {
+          openingHours_ = null;
+        } else {
+          openingHours_ = null;
+          openingHoursBuilder_ = null;
+        }
+        if (addressDetailsBuilder_ == null) {
+          addressDetails_ = null;
+        } else {
+          addressDetails_ = null;
+          addressDetailsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_Keybooth_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth getDefaultInstanceForType() {
+        return com.sixt.service.branch.api.BranchOuterClass.Keybooth.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth build() {
+        com.sixt.service.branch.api.BranchOuterClass.Keybooth result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sixt.service.branch.api.BranchOuterClass.Keybooth buildPartial() {
+        com.sixt.service.branch.api.BranchOuterClass.Keybooth result = new com.sixt.service.branch.api.BranchOuterClass.Keybooth(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        if (openingHoursBuilder_ == null) {
+          result.openingHours_ = openingHours_;
+        } else {
+          result.openingHours_ = openingHoursBuilder_.build();
+        }
+        if (addressDetailsBuilder_ == null) {
+          result.addressDetails_ = addressDetails_;
+        } else {
+          result.addressDetails_ = addressDetailsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sixt.service.branch.api.BranchOuterClass.Keybooth) {
+          return mergeFrom((com.sixt.service.branch.api.BranchOuterClass.Keybooth)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sixt.service.branch.api.BranchOuterClass.Keybooth other) {
+        if (other == com.sixt.service.branch.api.BranchOuterClass.Keybooth.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasOpeningHours()) {
+          mergeOpeningHours(other.getOpeningHours());
+        }
+        if (other.hasAddressDetails()) {
+          mergeAddressDetails(other.getAddressDetails());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.sixt.service.branch.api.BranchOuterClass.Keybooth parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.sixt.service.branch.api.BranchOuterClass.Keybooth) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.sixt.service.branch.api.BranchOuterClass.OpeningHours openingHours_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.OpeningHours, com.sixt.service.branch.api.BranchOuterClass.OpeningHours.Builder, com.sixt.service.branch.api.BranchOuterClass.OpeningHoursOrBuilder> openingHoursBuilder_;
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       * @return Whether the openingHours field is set.
+       */
+      public boolean hasOpeningHours() {
+        return openingHoursBuilder_ != null || openingHours_ != null;
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       * @return The openingHours.
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.OpeningHours getOpeningHours() {
+        if (openingHoursBuilder_ == null) {
+          return openingHours_ == null ? com.sixt.service.branch.api.BranchOuterClass.OpeningHours.getDefaultInstance() : openingHours_;
+        } else {
+          return openingHoursBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      public Builder setOpeningHours(com.sixt.service.branch.api.BranchOuterClass.OpeningHours value) {
+        if (openingHoursBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          openingHours_ = value;
+          onChanged();
+        } else {
+          openingHoursBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      public Builder setOpeningHours(
+          com.sixt.service.branch.api.BranchOuterClass.OpeningHours.Builder builderForValue) {
+        if (openingHoursBuilder_ == null) {
+          openingHours_ = builderForValue.build();
+          onChanged();
+        } else {
+          openingHoursBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      public Builder mergeOpeningHours(com.sixt.service.branch.api.BranchOuterClass.OpeningHours value) {
+        if (openingHoursBuilder_ == null) {
+          if (openingHours_ != null) {
+            openingHours_ =
+              com.sixt.service.branch.api.BranchOuterClass.OpeningHours.newBuilder(openingHours_).mergeFrom(value).buildPartial();
+          } else {
+            openingHours_ = value;
+          }
+          onChanged();
+        } else {
+          openingHoursBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      public Builder clearOpeningHours() {
+        if (openingHoursBuilder_ == null) {
+          openingHours_ = null;
+          onChanged();
+        } else {
+          openingHours_ = null;
+          openingHoursBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.OpeningHours.Builder getOpeningHoursBuilder() {
+        
+        onChanged();
+        return getOpeningHoursFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.OpeningHoursOrBuilder getOpeningHoursOrBuilder() {
+        if (openingHoursBuilder_ != null) {
+          return openingHoursBuilder_.getMessageOrBuilder();
+        } else {
+          return openingHours_ == null ?
+              com.sixt.service.branch.api.BranchOuterClass.OpeningHours.getDefaultInstance() : openingHours_;
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.OpeningHours opening_hours = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.OpeningHours, com.sixt.service.branch.api.BranchOuterClass.OpeningHours.Builder, com.sixt.service.branch.api.BranchOuterClass.OpeningHoursOrBuilder> 
+          getOpeningHoursFieldBuilder() {
+        if (openingHoursBuilder_ == null) {
+          openingHoursBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sixt.service.branch.api.BranchOuterClass.OpeningHours, com.sixt.service.branch.api.BranchOuterClass.OpeningHours.Builder, com.sixt.service.branch.api.BranchOuterClass.OpeningHoursOrBuilder>(
+                  getOpeningHours(),
+                  getParentForChildren(),
+                  isClean());
+          openingHours_ = null;
+        }
+        return openingHoursBuilder_;
+      }
+
+      private com.sixt.service.branch.api.BranchOuterClass.AddressDetails addressDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.AddressDetails, com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder, com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder> addressDetailsBuilder_;
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       * @return Whether the addressDetails field is set.
+       */
+      public boolean hasAddressDetails() {
+        return addressDetailsBuilder_ != null || addressDetails_ != null;
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       * @return The addressDetails.
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.AddressDetails getAddressDetails() {
+        if (addressDetailsBuilder_ == null) {
+          return addressDetails_ == null ? com.sixt.service.branch.api.BranchOuterClass.AddressDetails.getDefaultInstance() : addressDetails_;
+        } else {
+          return addressDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      public Builder setAddressDetails(com.sixt.service.branch.api.BranchOuterClass.AddressDetails value) {
+        if (addressDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          addressDetails_ = value;
+          onChanged();
+        } else {
+          addressDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      public Builder setAddressDetails(
+          com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder builderForValue) {
+        if (addressDetailsBuilder_ == null) {
+          addressDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      public Builder mergeAddressDetails(com.sixt.service.branch.api.BranchOuterClass.AddressDetails value) {
+        if (addressDetailsBuilder_ == null) {
+          if (addressDetails_ != null) {
+            addressDetails_ =
+              com.sixt.service.branch.api.BranchOuterClass.AddressDetails.newBuilder(addressDetails_).mergeFrom(value).buildPartial();
+          } else {
+            addressDetails_ = value;
+          }
+          onChanged();
+        } else {
+          addressDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      public Builder clearAddressDetails() {
+        if (addressDetailsBuilder_ == null) {
+          addressDetails_ = null;
+          onChanged();
+        } else {
+          addressDetails_ = null;
+          addressDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder getAddressDetailsBuilder() {
+        
+        onChanged();
+        return getAddressDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder getAddressDetailsOrBuilder() {
+        if (addressDetailsBuilder_ != null) {
+          return addressDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return addressDetails_ == null ?
+              com.sixt.service.branch.api.BranchOuterClass.AddressDetails.getDefaultInstance() : addressDetails_;
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.AddressDetails address_details = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.AddressDetails, com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder, com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder> 
+          getAddressDetailsFieldBuilder() {
+        if (addressDetailsBuilder_ == null) {
+          addressDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sixt.service.branch.api.BranchOuterClass.AddressDetails, com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder, com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder>(
+                  getAddressDetails(),
+                  getParentForChildren(),
+                  isClean());
+          addressDetails_ = null;
+        }
+        return addressDetailsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.sixt.service.branch.Keybooth)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.sixt.service.branch.Keybooth)
+    private static final com.sixt.service.branch.api.BranchOuterClass.Keybooth DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sixt.service.branch.api.BranchOuterClass.Keybooth();
+    }
+
+    public static com.sixt.service.branch.api.BranchOuterClass.Keybooth getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Keybooth>
+        PARSER = new com.google.protobuf.AbstractParser<Keybooth>() {
+      @java.lang.Override
+      public Keybooth parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Keybooth(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Keybooth> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Keybooth> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sixt.service.branch.api.BranchOuterClass.Keybooth getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddressDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.sixt.service.branch.AddressDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.sixt.service.branch.Address address = 1;</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <code>.com.sixt.service.branch.Address address = 1;</code>
+     * @return The address.
+     */
+    com.sixt.service.branch.api.AddressOuterClass.Address getAddress();
+    /**
+     * <code>.com.sixt.service.branch.Address address = 1;</code>
+     */
+    com.sixt.service.branch.api.AddressOuterClass.AddressOrBuilder getAddressOrBuilder();
+
+    /**
+     * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+     * @return Whether the coordinates field is set.
+     */
+    boolean hasCoordinates();
+    /**
+     * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+     * @return The coordinates.
+     */
+    com.sixt.service.branch.api.AddressOuterClass.Coordinates getCoordinates();
+    /**
+     * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+     */
+    com.sixt.service.branch.api.AddressOuterClass.CoordinatesOrBuilder getCoordinatesOrBuilder();
+
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    java.util.List<com.sixt.service.branch.api.BranchOuterClass.Direction> 
+        getDirectionsList();
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    com.sixt.service.branch.api.BranchOuterClass.Direction getDirections(int index);
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    int getDirectionsCount();
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    java.util.List<? extends com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder> 
+        getDirectionsOrBuilderList();
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder getDirectionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code com.sixt.service.branch.AddressDetails}
+   */
+  public  static final class AddressDetails extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.sixt.service.branch.AddressDetails)
+      AddressDetailsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddressDetails.newBuilder() to construct.
+    private AddressDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddressDetails() {
+      directions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddressDetails();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddressDetails(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.sixt.service.branch.api.AddressOuterClass.Address.Builder subBuilder = null;
+              if (address_ != null) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(com.sixt.service.branch.api.AddressOuterClass.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.sixt.service.branch.api.AddressOuterClass.Coordinates.Builder subBuilder = null;
+              if (coordinates_ != null) {
+                subBuilder = coordinates_.toBuilder();
+              }
+              coordinates_ = input.readMessage(com.sixt.service.branch.api.AddressOuterClass.Coordinates.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(coordinates_);
+                coordinates_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                directions_ = new java.util.ArrayList<com.sixt.service.branch.api.BranchOuterClass.Direction>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              directions_.add(
+                  input.readMessage(com.sixt.service.branch.api.BranchOuterClass.Direction.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          directions_ = java.util.Collections.unmodifiableList(directions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_AddressDetails_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_AddressDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.sixt.service.branch.api.BranchOuterClass.AddressDetails.class, com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private com.sixt.service.branch.api.AddressOuterClass.Address address_;
+    /**
+     * <code>.com.sixt.service.branch.Address address = 1;</code>
+     * @return Whether the address field is set.
+     */
+    public boolean hasAddress() {
+      return address_ != null;
+    }
+    /**
+     * <code>.com.sixt.service.branch.Address address = 1;</code>
+     * @return The address.
+     */
+    public com.sixt.service.branch.api.AddressOuterClass.Address getAddress() {
+      return address_ == null ? com.sixt.service.branch.api.AddressOuterClass.Address.getDefaultInstance() : address_;
+    }
+    /**
+     * <code>.com.sixt.service.branch.Address address = 1;</code>
+     */
+    public com.sixt.service.branch.api.AddressOuterClass.AddressOrBuilder getAddressOrBuilder() {
+      return getAddress();
+    }
+
+    public static final int COORDINATES_FIELD_NUMBER = 2;
+    private com.sixt.service.branch.api.AddressOuterClass.Coordinates coordinates_;
+    /**
+     * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+     * @return Whether the coordinates field is set.
+     */
+    public boolean hasCoordinates() {
+      return coordinates_ != null;
+    }
+    /**
+     * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+     * @return The coordinates.
+     */
+    public com.sixt.service.branch.api.AddressOuterClass.Coordinates getCoordinates() {
+      return coordinates_ == null ? com.sixt.service.branch.api.AddressOuterClass.Coordinates.getDefaultInstance() : coordinates_;
+    }
+    /**
+     * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+     */
+    public com.sixt.service.branch.api.AddressOuterClass.CoordinatesOrBuilder getCoordinatesOrBuilder() {
+      return getCoordinates();
+    }
+
+    public static final int DIRECTIONS_FIELD_NUMBER = 3;
+    private java.util.List<com.sixt.service.branch.api.BranchOuterClass.Direction> directions_;
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    public java.util.List<com.sixt.service.branch.api.BranchOuterClass.Direction> getDirectionsList() {
+      return directions_;
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    public java.util.List<? extends com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder> 
+        getDirectionsOrBuilderList() {
+      return directions_;
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    public int getDirectionsCount() {
+      return directions_.size();
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.Direction getDirections(int index) {
+      return directions_.get(index);
+    }
+    /**
+     * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+     */
+    public com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder getDirectionsOrBuilder(
+        int index) {
+      return directions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (address_ != null) {
+        output.writeMessage(1, getAddress());
+      }
+      if (coordinates_ != null) {
+        output.writeMessage(2, getCoordinates());
+      }
+      for (int i = 0; i < directions_.size(); i++) {
+        output.writeMessage(3, directions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (address_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAddress());
+      }
+      if (coordinates_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCoordinates());
+      }
+      for (int i = 0; i < directions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, directions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.sixt.service.branch.api.BranchOuterClass.AddressDetails)) {
+        return super.equals(obj);
+      }
+      com.sixt.service.branch.api.BranchOuterClass.AddressDetails other = (com.sixt.service.branch.api.BranchOuterClass.AddressDetails) obj;
+
+      if (hasAddress() != other.hasAddress()) return false;
+      if (hasAddress()) {
+        if (!getAddress()
+            .equals(other.getAddress())) return false;
+      }
+      if (hasCoordinates() != other.hasCoordinates()) return false;
+      if (hasCoordinates()) {
+        if (!getCoordinates()
+            .equals(other.getCoordinates())) return false;
+      }
+      if (!getDirectionsList()
+          .equals(other.getDirectionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      if (hasCoordinates()) {
+        hash = (37 * hash) + COORDINATES_FIELD_NUMBER;
+        hash = (53 * hash) + getCoordinates().hashCode();
+      }
+      if (getDirectionsCount() > 0) {
+        hash = (37 * hash) + DIRECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDirectionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.sixt.service.branch.api.BranchOuterClass.AddressDetails prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.sixt.service.branch.AddressDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.sixt.service.branch.AddressDetails)
+        com.sixt.service.branch.api.BranchOuterClass.AddressDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_AddressDetails_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_AddressDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.sixt.service.branch.api.BranchOuterClass.AddressDetails.class, com.sixt.service.branch.api.BranchOuterClass.AddressDetails.Builder.class);
+      }
+
+      // Construct using com.sixt.service.branch.api.BranchOuterClass.AddressDetails.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDirectionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (addressBuilder_ == null) {
+          address_ = null;
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+        if (coordinatesBuilder_ == null) {
+          coordinates_ = null;
+        } else {
+          coordinates_ = null;
+          coordinatesBuilder_ = null;
+        }
+        if (directionsBuilder_ == null) {
+          directions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          directionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.sixt.service.branch.api.BranchOuterClass.internal_static_com_sixt_service_branch_AddressDetails_descriptor;
+      }
+
+      @java.lang.Override
+      public com.sixt.service.branch.api.BranchOuterClass.AddressDetails getDefaultInstanceForType() {
+        return com.sixt.service.branch.api.BranchOuterClass.AddressDetails.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.sixt.service.branch.api.BranchOuterClass.AddressDetails build() {
+        com.sixt.service.branch.api.BranchOuterClass.AddressDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.sixt.service.branch.api.BranchOuterClass.AddressDetails buildPartial() {
+        com.sixt.service.branch.api.BranchOuterClass.AddressDetails result = new com.sixt.service.branch.api.BranchOuterClass.AddressDetails(this);
+        int from_bitField0_ = bitField0_;
+        if (addressBuilder_ == null) {
+          result.address_ = address_;
+        } else {
+          result.address_ = addressBuilder_.build();
+        }
+        if (coordinatesBuilder_ == null) {
+          result.coordinates_ = coordinates_;
+        } else {
+          result.coordinates_ = coordinatesBuilder_.build();
+        }
+        if (directionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            directions_ = java.util.Collections.unmodifiableList(directions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.directions_ = directions_;
+        } else {
+          result.directions_ = directionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.sixt.service.branch.api.BranchOuterClass.AddressDetails) {
+          return mergeFrom((com.sixt.service.branch.api.BranchOuterClass.AddressDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.sixt.service.branch.api.BranchOuterClass.AddressDetails other) {
+        if (other == com.sixt.service.branch.api.BranchOuterClass.AddressDetails.getDefaultInstance()) return this;
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        if (other.hasCoordinates()) {
+          mergeCoordinates(other.getCoordinates());
+        }
+        if (directionsBuilder_ == null) {
+          if (!other.directions_.isEmpty()) {
+            if (directions_.isEmpty()) {
+              directions_ = other.directions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDirectionsIsMutable();
+              directions_.addAll(other.directions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.directions_.isEmpty()) {
+            if (directionsBuilder_.isEmpty()) {
+              directionsBuilder_.dispose();
+              directionsBuilder_ = null;
+              directions_ = other.directions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              directionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDirectionsFieldBuilder() : null;
+            } else {
+              directionsBuilder_.addAllMessages(other.directions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.sixt.service.branch.api.BranchOuterClass.AddressDetails parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.sixt.service.branch.api.BranchOuterClass.AddressDetails) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.sixt.service.branch.api.AddressOuterClass.Address address_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.AddressOuterClass.Address, com.sixt.service.branch.api.AddressOuterClass.Address.Builder, com.sixt.service.branch.api.AddressOuterClass.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       * @return Whether the address field is set.
+       */
+      public boolean hasAddress() {
+        return addressBuilder_ != null || address_ != null;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       * @return The address.
+       */
+      public com.sixt.service.branch.api.AddressOuterClass.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_ == null ? com.sixt.service.branch.api.AddressOuterClass.Address.getDefaultInstance() : address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      public Builder setAddress(com.sixt.service.branch.api.AddressOuterClass.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      public Builder setAddress(
+          com.sixt.service.branch.api.AddressOuterClass.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      public Builder mergeAddress(com.sixt.service.branch.api.AddressOuterClass.Address value) {
+        if (addressBuilder_ == null) {
+          if (address_ != null) {
+            address_ =
+              com.sixt.service.branch.api.AddressOuterClass.Address.newBuilder(address_).mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = null;
+          onChanged();
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      public com.sixt.service.branch.api.AddressOuterClass.Address.Builder getAddressBuilder() {
+        
+        onChanged();
+        return getAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      public com.sixt.service.branch.api.AddressOuterClass.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_ == null ?
+              com.sixt.service.branch.api.AddressOuterClass.Address.getDefaultInstance() : address_;
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.Address address = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.AddressOuterClass.Address, com.sixt.service.branch.api.AddressOuterClass.Address.Builder, com.sixt.service.branch.api.AddressOuterClass.AddressOrBuilder> 
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sixt.service.branch.api.AddressOuterClass.Address, com.sixt.service.branch.api.AddressOuterClass.Address.Builder, com.sixt.service.branch.api.AddressOuterClass.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      private com.sixt.service.branch.api.AddressOuterClass.Coordinates coordinates_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.AddressOuterClass.Coordinates, com.sixt.service.branch.api.AddressOuterClass.Coordinates.Builder, com.sixt.service.branch.api.AddressOuterClass.CoordinatesOrBuilder> coordinatesBuilder_;
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       * @return Whether the coordinates field is set.
+       */
+      public boolean hasCoordinates() {
+        return coordinatesBuilder_ != null || coordinates_ != null;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       * @return The coordinates.
+       */
+      public com.sixt.service.branch.api.AddressOuterClass.Coordinates getCoordinates() {
+        if (coordinatesBuilder_ == null) {
+          return coordinates_ == null ? com.sixt.service.branch.api.AddressOuterClass.Coordinates.getDefaultInstance() : coordinates_;
+        } else {
+          return coordinatesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      public Builder setCoordinates(com.sixt.service.branch.api.AddressOuterClass.Coordinates value) {
+        if (coordinatesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          coordinates_ = value;
+          onChanged();
+        } else {
+          coordinatesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      public Builder setCoordinates(
+          com.sixt.service.branch.api.AddressOuterClass.Coordinates.Builder builderForValue) {
+        if (coordinatesBuilder_ == null) {
+          coordinates_ = builderForValue.build();
+          onChanged();
+        } else {
+          coordinatesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      public Builder mergeCoordinates(com.sixt.service.branch.api.AddressOuterClass.Coordinates value) {
+        if (coordinatesBuilder_ == null) {
+          if (coordinates_ != null) {
+            coordinates_ =
+              com.sixt.service.branch.api.AddressOuterClass.Coordinates.newBuilder(coordinates_).mergeFrom(value).buildPartial();
+          } else {
+            coordinates_ = value;
+          }
+          onChanged();
+        } else {
+          coordinatesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      public Builder clearCoordinates() {
+        if (coordinatesBuilder_ == null) {
+          coordinates_ = null;
+          onChanged();
+        } else {
+          coordinates_ = null;
+          coordinatesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      public com.sixt.service.branch.api.AddressOuterClass.Coordinates.Builder getCoordinatesBuilder() {
+        
+        onChanged();
+        return getCoordinatesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      public com.sixt.service.branch.api.AddressOuterClass.CoordinatesOrBuilder getCoordinatesOrBuilder() {
+        if (coordinatesBuilder_ != null) {
+          return coordinatesBuilder_.getMessageOrBuilder();
+        } else {
+          return coordinates_ == null ?
+              com.sixt.service.branch.api.AddressOuterClass.Coordinates.getDefaultInstance() : coordinates_;
+        }
+      }
+      /**
+       * <code>.com.sixt.service.branch.Coordinates coordinates = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.sixt.service.branch.api.AddressOuterClass.Coordinates, com.sixt.service.branch.api.AddressOuterClass.Coordinates.Builder, com.sixt.service.branch.api.AddressOuterClass.CoordinatesOrBuilder> 
+          getCoordinatesFieldBuilder() {
+        if (coordinatesBuilder_ == null) {
+          coordinatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.sixt.service.branch.api.AddressOuterClass.Coordinates, com.sixt.service.branch.api.AddressOuterClass.Coordinates.Builder, com.sixt.service.branch.api.AddressOuterClass.CoordinatesOrBuilder>(
+                  getCoordinates(),
+                  getParentForChildren(),
+                  isClean());
+          coordinates_ = null;
+        }
+        return coordinatesBuilder_;
+      }
+
+      private java.util.List<com.sixt.service.branch.api.BranchOuterClass.Direction> directions_ =
+        java.util.Collections.emptyList();
+      private void ensureDirectionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          directions_ = new java.util.ArrayList<com.sixt.service.branch.api.BranchOuterClass.Direction>(directions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.Direction, com.sixt.service.branch.api.BranchOuterClass.Direction.Builder, com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder> directionsBuilder_;
+
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public java.util.List<com.sixt.service.branch.api.BranchOuterClass.Direction> getDirectionsList() {
+        if (directionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(directions_);
+        } else {
+          return directionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public int getDirectionsCount() {
+        if (directionsBuilder_ == null) {
+          return directions_.size();
+        } else {
+          return directionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Direction getDirections(int index) {
+        if (directionsBuilder_ == null) {
+          return directions_.get(index);
+        } else {
+          return directionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder setDirections(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Direction value) {
+        if (directionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDirectionsIsMutable();
+          directions_.set(index, value);
+          onChanged();
+        } else {
+          directionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder setDirections(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Direction.Builder builderForValue) {
+        if (directionsBuilder_ == null) {
+          ensureDirectionsIsMutable();
+          directions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          directionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder addDirections(com.sixt.service.branch.api.BranchOuterClass.Direction value) {
+        if (directionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDirectionsIsMutable();
+          directions_.add(value);
+          onChanged();
+        } else {
+          directionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder addDirections(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Direction value) {
+        if (directionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDirectionsIsMutable();
+          directions_.add(index, value);
+          onChanged();
+        } else {
+          directionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder addDirections(
+          com.sixt.service.branch.api.BranchOuterClass.Direction.Builder builderForValue) {
+        if (directionsBuilder_ == null) {
+          ensureDirectionsIsMutable();
+          directions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          directionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder addDirections(
+          int index, com.sixt.service.branch.api.BranchOuterClass.Direction.Builder builderForValue) {
+        if (directionsBuilder_ == null) {
+          ensureDirectionsIsMutable();
+          directions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          directionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder addAllDirections(
+          java.lang.Iterable<? extends com.sixt.service.branch.api.BranchOuterClass.Direction> values) {
+        if (directionsBuilder_ == null) {
+          ensureDirectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, directions_);
+          onChanged();
+        } else {
+          directionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder clearDirections() {
+        if (directionsBuilder_ == null) {
+          directions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          directionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public Builder removeDirections(int index) {
+        if (directionsBuilder_ == null) {
+          ensureDirectionsIsMutable();
+          directions_.remove(index);
+          onChanged();
+        } else {
+          directionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Direction.Builder getDirectionsBuilder(
+          int index) {
+        return getDirectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder getDirectionsOrBuilder(
+          int index) {
+        if (directionsBuilder_ == null) {
+          return directions_.get(index);  } else {
+          return directionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public java.util.List<? extends com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder> 
+           getDirectionsOrBuilderList() {
+        if (directionsBuilder_ != null) {
+          return directionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(directions_);
+        }
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Direction.Builder addDirectionsBuilder() {
+        return getDirectionsFieldBuilder().addBuilder(
+            com.sixt.service.branch.api.BranchOuterClass.Direction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public com.sixt.service.branch.api.BranchOuterClass.Direction.Builder addDirectionsBuilder(
+          int index) {
+        return getDirectionsFieldBuilder().addBuilder(
+            index, com.sixt.service.branch.api.BranchOuterClass.Direction.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.sixt.service.branch.Direction directions = 3;</code>
+       */
+      public java.util.List<com.sixt.service.branch.api.BranchOuterClass.Direction.Builder> 
+           getDirectionsBuilderList() {
+        return getDirectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.sixt.service.branch.api.BranchOuterClass.Direction, com.sixt.service.branch.api.BranchOuterClass.Direction.Builder, com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder> 
+          getDirectionsFieldBuilder() {
+        if (directionsBuilder_ == null) {
+          directionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.sixt.service.branch.api.BranchOuterClass.Direction, com.sixt.service.branch.api.BranchOuterClass.Direction.Builder, com.sixt.service.branch.api.BranchOuterClass.DirectionOrBuilder>(
+                  directions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          directions_ = null;
+        }
+        return directionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.sixt.service.branch.AddressDetails)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.sixt.service.branch.AddressDetails)
+    private static final com.sixt.service.branch.api.BranchOuterClass.AddressDetails DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.sixt.service.branch.api.BranchOuterClass.AddressDetails();
+    }
+
+    public static com.sixt.service.branch.api.BranchOuterClass.AddressDetails getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddressDetails>
+        PARSER = new com.google.protobuf.AbstractParser<AddressDetails>() {
+      @java.lang.Override
+      public AddressDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddressDetails(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddressDetails> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddressDetails> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.sixt.service.branch.api.BranchOuterClass.AddressDetails getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -46822,6 +49491,16 @@ public final class BranchOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_sixt_service_branch_BranchObject_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sixt_service_branch_Keybooth_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sixt_service_branch_Keybooth_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_sixt_service_branch_AddressDetails_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_sixt_service_branch_AddressDetails_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_sixt_service_branch_ShuttleInformation_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -46993,7 +49672,7 @@ public final class BranchOuterClass {
       "rvice.branch.BranchOpeningTime\022;\n\007holida" +
       "y\030\010 \003(\0132*.com.sixt.service.branch.Branch" +
       "OpeningTime\"0\n\021BranchOpeningTime\022\014\n\004open" +
-      "\030\001 \001(\t\022\r\n\005close\030\002 \001(\t\"\357\014\n\014BranchObject\022\020" +
+      "\030\001 \001(\t\022\r\n\005close\030\002 \001(\t\"\245\r\n\014BranchObject\022\020" +
       "\n\010branchId\030\001 \001(\003\0221\n\004type\030\002 \001(\0162#.com.six" +
       "t.service.branch.BranchType\022\020\n\010iataCode\030" +
       "\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\016\n\006locale\030\006 \001(\t\022.\n\006b" +
@@ -47034,154 +49713,164 @@ public final class BranchOuterClass {
       "\n\032deliveryAdvanceBookingTime\0300 \001(\003\022\030\n\020ha" +
       "sDiamondLounge\0301 \001(\010\022A\n\ronlineCheckIn\0302 " +
       "\001(\0162*.com.sixt.service.branch.OnlineChec" +
-      "kInTypeJ\004\010\033\020\034J\004\010\034\020\035J\004\010\035\020\036J\004\010/\0200\">\n\022Shutt" +
-      "leInformation\022\023\n\013shuttleType\030\001 \001(\t\022\023\n\013sh" +
-      "uttleText\030\002 \001(\t\"(\n\nWinterTime\022\r\n\005start\030\001" +
-      " \001(\t\022\013\n\003end\030\002 \001(\t\"~\n\005Fleet\022+\n\004pool\030\001 \001(\013" +
-      "2\035.com.sixt.service.branch.Pool\022/\n\006regio" +
-      "n\030\002 \001(\0132\037.com.sixt.service.branch.Region" +
-      "\022\027\n\017vehicleSaleType\030\003 \001(\t\"(\n\006Region\022\020\n\010r" +
-      "egionID\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\"$\n\004Pool\022\016\n\006p" +
-      "oolID\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\"|\n\004Hint\0223\n\010hin" +
-      "tType\030\001 \001(\0162!.com.sixt.service.branch.Hi" +
-      "ntType\0221\n\007carType\030\002 \001(\0162 .com.sixt.servi" +
-      "ce.branch.CarType\022\014\n\004text\030\003 \001(\t\"\326\002\n\010Fast" +
-      "Lane\022\021\n\tisOpen247\030\001 \001(\010\022\023\n\013hasFastRent\030\002" +
-      " \001(\010\022\035\n\025isAvailableOutOfHours\030\003 \001(\010\022\034\n\024r" +
-      "eturnToFastLaneOnly\030\004 \001(\010\022\026\n\016skipTurnaro" +
-      "und\030\005 \001(\010\022\027\n\017isRefuelingFree\030\006 \001(\010\022\031\n\021di" +
-      "stanceToStation\030\007 \001(\003\022\031\n\021maxUnlockDistan" +
-      "ce\030\010 \001(\003\022=\n\017parkingLocation\030\t \001(\0132$.com." +
-      "sixt.service.branch.Coordinates\022?\n\nbranc" +
-      "hType\030\n \001(\0162+.com.sixt.service.branch.Fa" +
-      "stLaneBranchType\"W\n\nExternalId\0225\n\004type\030\001" +
-      " \001(\0162\'.com.sixt.service.branch.ExternalI" +
-      "dType\022\022\n\nexternalId\030\002 \001(\t\"\241\001\n\007Contact\0222\n" +
-      "\004type\030\001 \001(\0162$.com.sixt.service.branch.Co" +
-      "ntactType\022\021\n\tfirstName\030\002 \001(\t\022\020\n\010lastName" +
-      "\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\013\n\003fax\030\005 \001(\t\022\016\n\006mo" +
-      "bile\030\006 \001(\t\022\021\n\ttelephone\030\007 \001(\t\"^\n\tDirecti" +
-      "on\0224\n\004type\030\001 \001(\0162&.com.sixt.service.bran" +
-      "ch.DirectionType\022\r\n\005title\030\002 \001(\t\022\014\n\004text\030" +
-      "\003 \001(\t\"O\n\006Status\022\016\n\006active\030\001 \001(\010\022\020\n\010booka" +
-      "ble\030\002 \001(\010\022\020\n\010channels\030\003 \003(\t\022\021\n\tisVirtual" +
-      "\030\004 \001(\010\"(\n\tOpenClose\022\014\n\004open\030\001 \001(\t\022\r\n\005clo" +
-      "se\030\002 \001(\t\"\226\001\n\014OpeningTimes\022;\n\014openingHour" +
-      "s\030\001 \001(\0132%.com.sixt.service.branch.Openin" +
-      "gHours\0227\n\noutOfHours\030\002 \001(\0132#.com.sixt.se" +
-      "rvice.branch.OutOfHours\022\020\n\010holidays\030\003 \003(" +
-      "\t\"\267\003\n\014OpeningHours\0222\n\006monday\030\001 \003(\0132\".com" +
-      ".sixt.service.branch.OpenClose\0223\n\007tuesda" +
-      "y\030\002 \003(\0132\".com.sixt.service.branch.OpenCl" +
-      "ose\0225\n\twednesday\030\003 \003(\0132\".com.sixt.servic" +
-      "e.branch.OpenClose\0224\n\010thursday\030\004 \003(\0132\".c" +
-      "om.sixt.service.branch.OpenClose\0222\n\006frid" +
-      "ay\030\005 \003(\0132\".com.sixt.service.branch.OpenC" +
-      "lose\0224\n\010saturday\030\006 \003(\0132\".com.sixt.servic" +
-      "e.branch.OpenClose\0222\n\006sunday\030\007 \003(\0132\".com" +
-      ".sixt.service.branch.OpenClose\0223\n\007holida" +
-      "y\030\010 \003(\0132\".com.sixt.service.branch.OpenCl" +
-      "ose\"o\n\010Location\0229\n\013coordinates\030\001 \001(\0132$.c" +
-      "om.sixt.service.branch.Coordinates\022\020\n\010ti" +
-      "meZone\030\002 \001(\t\022\026\n\016timeZoneOffset\030\003 \001(\t\"i\n\007" +
-      "Company\022\021\n\tcompanyId\030\001 \001(\003\022\014\n\004name\030\002 \001(\t" +
-      "\022\025\n\raddressFormat\030\003 \001(\t\022\016\n\006locale\030\005 \001(\t\022" +
-      "\026\n\016usFranchiseeId\030\006 \001(\003\"\202\001\n\017ServicePostc" +
-      "ode\0221\n\007carType\030\001 \001(\0162 .com.sixt.service." +
-      "branch.CarType\022\023\n\013countryCode\030\002 \001(\t\022\022\n\np" +
-      "ostalCode\030\003 \001(\t\022\023\n\013isExclusive\030\004 \001(\010*W\n\022" +
-      "FastLaneBranchType\022\016\n\nNoFastLane\020\000\022\n\n\006Hy" +
-      "brid\020\001\022\022\n\016VirtualImplant\020\002\022\021\n\rVirtualPub" +
-      "lic\020\003*\205\001\n\021OnlineCheckInType\022$\n OnlineChe" +
-      "ckInTypeNoOnlineCheckIn\020\000\022%\n!OnlineCheck" +
-      "InTypeNoExpressCounter\020\001\022#\n\037OnlineCheckI" +
-      "nTypeExpressCounter\020\002*\333\002\n\nBranchType\022\023\n\017" +
-      "BranchTypeOther\020\000\022\025\n\021BranchTypeAirport\020\001" +
-      "\022\032\n\026BranchTypeTrainStation\020\002\022\026\n\022BranchTy" +
-      "peDowntown\020\003\022\023\n\017BranchTypeAAFES\020\004\022\025\n\021Bra" +
-      "nchTypeImplant\020\005\022\036\n\032BranchTypeLimousineS" +
-      "ervice\020\006\022\032\n\026BranchTypeADACPartners\020\007\022\032\n\026" +
-      "BranchTypeRepairCenter\020\010\022\037\n\033BranchTypeIn" +
-      "ternalWithFleet\020\t\022,\n(BranchTypeBahnAndMi" +
-      "etwagenServicestation\020\n\022\032\n\026BranchTypeCGS" +
-      "alesPoint\020\013*\221\004\n\013ContactType\022\024\n\020ContactTy" +
-      "peOther\020\000\022\037\n\033ContactTypeEmergencyService" +
-      "\020\001\022\037\n\033ContactTypeAgencySupervisor\020\002\022\033\n\027C" +
-      "ontactTypeFleetManager\020\003\022\034\n\030ContactTypeB" +
-      "ranchManager\020\004\022\033\n\027ContactTypeLostAndFoun" +
-      "d\020\005\022\036\n\032ContactTypeYieldMonitoring\020\006\022\034\n\030C" +
-      "ontactTypePhoneInternal\020\007\022\033\n\027ContactType" +
-      "TruckManager\020\010\022\032\n\026ContactTypePhonePublic" +
-      "\020\t\022\037\n\033ContactTypeHeadOfDepartment\020\n\022!\n\035C" +
-      "ontactTypeReservationRequest\020\013\022\022\n\016Contac" +
-      "tTypeCEO\020\014\022\031\n\025ContactTypeSupervisor\020\r\022\036\n" +
-      "\032ContactTypeCustomerService\020\016\022\022\n\016Contact" +
-      "TypeIFM\020\017\022\033\n\027ContactTypeHeadOfRegion\020\020\022\027" +
-      "\n\023ContactTypeStandard\020\021*\211\002\n\007CarType\022\025\n\021C" +
-      "arTypeMotorcyles\020\000\022\024\n\020CarTypeMinibuses\020\001" +
-      "\022\027\n\023CarTypeConvertibles\020\002\022\021\n\rCarTypeEBik" +
-      "es\020\003\022\020\n\014CarTypeJeeps\020\004\022\035\n\031CarTypeVansAnd" +
-      "LightTrucks\020\005\022\030\n\024CarTypePassengerCars\020\006\022" +
-      "\030\n\024CarTypeTrailerTrucks\020\007\022\030\n\024CarTypeVans" +
-      "AndTrucks\020\010\022\017\n\013CarTypeVans\020\t\022\025\n\021CarTypeL" +
-      "uxuryCars\020\n*\372\001\n\rDirectionType\022\024\n\020OutOfHo" +
-      "ursReturn\020\000\022\022\n\016ExpressCounter\020\001\022\022\n\016Stati" +
-      "onParking\020\002\022\025\n\021LocationDirection\020\003\022\021\n\rPr" +
-      "earrivalSMS\020\004\022\020\n\014PrereturnSMS\020\005\022\016\n\nShutt" +
-      "leURL\020\006\022\023\n\017CustomerParking\020\007\022\024\n\020OutOfHou" +
-      "rsPickup\020\010\022\013\n\007Shuttle\020\t\022\023\n\017FastLaneParki" +
-      "ng\020\n\022\022\n\016OtherDirection\020\013*\205\001\n\010HintType\022\017\n" +
-      "\013UnknownHint\020\000\022\027\n\023OfferListConfigHint\020\001\022" +
-      "\027\n\023PersonalDetailsHint\020\002\022\037\n\033ReservationC" +
-      "onfirmationHint\020\003\022\025\n\021StationSearchHint\020\004" +
-      "*\215\004\n\016ExternalIdType\022\013\n\007Unknown\020\000\022\013\n\007Amad" +
-      "eus\020\001\022\010\n\004Toma\020\002\022\017\n\013AmadeusLong\020\003\022\016\n\nGdsA" +
-      "irport\020\004\022\022\n\016GdsAirportLong\020\005\022\017\n\013GdsTermi" +
-      "nal\020\006\022\023\n\017GdsTerminalLong\020\007\022\022\n\016GdsTermina" +
-      "lOff\020\010\022\026\n\022GdsTerminalOffLong\020\t\022\022\n\016GdsRai" +
-      "lStation\020\n\022\026\n\022GdsRailStationLong\020\013\022\021\n\rGd" +
-      "sCityCenter\020\014\022\025\n\021GdsCityCenterLong\020\r\022\017\n\013" +
-      "GdsCityEast\020\016\022\023\n\017GdsCityEastLong\020\017\022\020\n\014Gd" +
-      "sCityNorth\020\020\022\024\n\020GdsCityNorthLong\020\021\022\020\n\014Gd" +
-      "sCitySouth\020\022\022\024\n\020GdsCitySouthLong\020\023\022\017\n\013Gd" +
-      "sCityWest\020\024\022\023\n\017GdsCityWestLong\020\025\022\014\n\010GdsH" +
-      "otel\020\026\022\020\n\014GdsHotelLong\020\027\022\013\n\007GdsPort\020\030\022\017\n" +
-      "\013GdsPortLong\020\031\022\r\n\tGdsResort\020\032\022\021\n\rGdsReso" +
-      "rtLong\020\033*V\n\nDelColType\022\030\n\024DelColTypeNotA" +
-      "llowed\020\000\022\025\n\021DelColTypeAllowed\020\001\022\027\n\023DelCo" +
-      "lTypeMandatory\020\002*f\n\016OutOfHoursType\022\034\n\030Ou" +
-      "tOfHoursTypeNotAllowed\020\000\022\031\n\025OutOfHoursTy" +
-      "peAllowed\020\001\022\033\n\027OutOfHoursTypeOnRequest\020\002" +
-      "*\314\001\n\005Brand\022\r\n\tBrandSixt\020\000\022\036\n\032BrandAssure" +
-      "dVehicleRentals\020\001\022\016\n\nBrandBoels\020\002\022\025\n\021Bra" +
-      "ndBPGasStation\020\003\022\030\n\024BrandFMGSupportGroup" +
-      "\020\004\022\020\n\014BrandNexusUK\020\005\022\020\n\014BrandThrifty\020\006\022\017" +
-      "\n\013BrandUnited\020\007\022\017\n\013BrandFlizzr\020\010\022\r\n\tBran" +
-      "dAudi\020\t2\205\007\n\006Branch\022g\n\006Search\022,.com.sixt." +
-      "service.branch.BranchSearchRequest\032-.com" +
-      ".sixt.service.branch.BranchSearchRespons" +
-      "e\"\000\022^\n\003Get\022).com.sixt.service.branch.Bra" +
-      "nchGetRequest\032*.com.sixt.service.branch." +
-      "BranchGetResponse\"\000\022g\n\006GetAll\022,.com.sixt" +
-      ".service.branch.BranchGetAllRequest\032-.co" +
-      "m.sixt.service.branch.BranchGetAllRespon" +
-      "se\"\000\022{\n\020GetAllCompressed\022,.com.sixt.serv" +
-      "ice.branch.BranchGetAllRequest\0327.com.six" +
-      "t.service.branch.BranchGetAllCompressedR" +
-      "esponse\"\000\022\246\001\n\033ValidatePickupAndReturnTim" +
-      "e\022A.com.sixt.service.branch.BranchValida" +
-      "tePickupAndReturnTimeRequest\032B.com.sixt." +
-      "service.branch.BranchValidatePickupAndRe" +
-      "turnTimeResponse\"\000\022\205\001\n\020GetByExternalIds\022" +
-      "6.com.sixt.service.branch.BranchGetByExt" +
-      "ernalIdsRequest\0327.com.sixt.service.branc" +
-      "h.BranchGetByExternalIdsResponse\"\000\022\232\001\n\035G" +
-      "etDeliveryCollectionBranches\022:.com.sixt." +
-      "service.branch.DeliveryCollectionBranche" +
-      "sRequest\032;.com.sixt.service.branch.Deliv" +
-      "eryCollectionBranchesResponse\"\000B9\n\033com.s" +
-      "ixt.service.branch.apiP\000Z\030/com_sixt_serv" +
-      "ice_branchb\006proto3"
+      "kInType\0224\n\tkeybooths\0303 \003(\0132!.com.sixt.se" +
+      "rvice.branch.KeyboothJ\004\010\033\020\034J\004\010\034\020\035J\004\010\035\020\036J" +
+      "\004\010/\0200\"\244\001\n\010Keybooth\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
+      " \001(\t\022<\n\ropening_hours\030\003 \001(\0132%.com.sixt.s" +
+      "ervice.branch.OpeningHours\022@\n\017address_de" +
+      "tails\030\004 \001(\0132\'.com.sixt.service.branch.Ad" +
+      "dressDetails\"\266\001\n\016AddressDetails\0221\n\007addre" +
+      "ss\030\001 \001(\0132 .com.sixt.service.branch.Addre" +
+      "ss\0229\n\013coordinates\030\002 \001(\0132$.com.sixt.servi" +
+      "ce.branch.Coordinates\0226\n\ndirections\030\003 \003(" +
+      "\0132\".com.sixt.service.branch.Direction\">\n" +
+      "\022ShuttleInformation\022\023\n\013shuttleType\030\001 \001(\t" +
+      "\022\023\n\013shuttleText\030\002 \001(\t\"(\n\nWinterTime\022\r\n\005s" +
+      "tart\030\001 \001(\t\022\013\n\003end\030\002 \001(\t\"~\n\005Fleet\022+\n\004pool" +
+      "\030\001 \001(\0132\035.com.sixt.service.branch.Pool\022/\n" +
+      "\006region\030\002 \001(\0132\037.com.sixt.service.branch." +
+      "Region\022\027\n\017vehicleSaleType\030\003 \001(\t\"(\n\006Regio" +
+      "n\022\020\n\010regionID\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\"$\n\004Poo" +
+      "l\022\016\n\006poolID\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\"|\n\004Hint\022" +
+      "3\n\010hintType\030\001 \001(\0162!.com.sixt.service.bra" +
+      "nch.HintType\0221\n\007carType\030\002 \001(\0162 .com.sixt" +
+      ".service.branch.CarType\022\014\n\004text\030\003 \001(\t\"\326\002" +
+      "\n\010FastLane\022\021\n\tisOpen247\030\001 \001(\010\022\023\n\013hasFast" +
+      "Rent\030\002 \001(\010\022\035\n\025isAvailableOutOfHours\030\003 \001(" +
+      "\010\022\034\n\024returnToFastLaneOnly\030\004 \001(\010\022\026\n\016skipT" +
+      "urnaround\030\005 \001(\010\022\027\n\017isRefuelingFree\030\006 \001(\010" +
+      "\022\031\n\021distanceToStation\030\007 \001(\003\022\031\n\021maxUnlock" +
+      "Distance\030\010 \001(\003\022=\n\017parkingLocation\030\t \001(\0132" +
+      "$.com.sixt.service.branch.Coordinates\022?\n" +
+      "\nbranchType\030\n \001(\0162+.com.sixt.service.bra" +
+      "nch.FastLaneBranchType\"W\n\nExternalId\0225\n\004" +
+      "type\030\001 \001(\0162\'.com.sixt.service.branch.Ext" +
+      "ernalIdType\022\022\n\nexternalId\030\002 \001(\t\"\241\001\n\007Cont" +
+      "act\0222\n\004type\030\001 \001(\0162$.com.sixt.service.bra" +
+      "nch.ContactType\022\021\n\tfirstName\030\002 \001(\t\022\020\n\010la" +
+      "stName\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\013\n\003fax\030\005 \001(\t" +
+      "\022\016\n\006mobile\030\006 \001(\t\022\021\n\ttelephone\030\007 \001(\t\"^\n\tD" +
+      "irection\0224\n\004type\030\001 \001(\0162&.com.sixt.servic" +
+      "e.branch.DirectionType\022\r\n\005title\030\002 \001(\t\022\014\n" +
+      "\004text\030\003 \001(\t\"O\n\006Status\022\016\n\006active\030\001 \001(\010\022\020\n" +
+      "\010bookable\030\002 \001(\010\022\020\n\010channels\030\003 \003(\t\022\021\n\tisV" +
+      "irtual\030\004 \001(\010\"(\n\tOpenClose\022\014\n\004open\030\001 \001(\t\022" +
+      "\r\n\005close\030\002 \001(\t\"\226\001\n\014OpeningTimes\022;\n\014openi" +
+      "ngHours\030\001 \001(\0132%.com.sixt.service.branch." +
+      "OpeningHours\0227\n\noutOfHours\030\002 \001(\0132#.com.s" +
+      "ixt.service.branch.OutOfHours\022\020\n\010holiday" +
+      "s\030\003 \003(\t\"\267\003\n\014OpeningHours\0222\n\006monday\030\001 \003(\013" +
+      "2\".com.sixt.service.branch.OpenClose\0223\n\007" +
+      "tuesday\030\002 \003(\0132\".com.sixt.service.branch." +
+      "OpenClose\0225\n\twednesday\030\003 \003(\0132\".com.sixt." +
+      "service.branch.OpenClose\0224\n\010thursday\030\004 \003" +
+      "(\0132\".com.sixt.service.branch.OpenClose\0222" +
+      "\n\006friday\030\005 \003(\0132\".com.sixt.service.branch" +
+      ".OpenClose\0224\n\010saturday\030\006 \003(\0132\".com.sixt." +
+      "service.branch.OpenClose\0222\n\006sunday\030\007 \003(\013" +
+      "2\".com.sixt.service.branch.OpenClose\0223\n\007" +
+      "holiday\030\010 \003(\0132\".com.sixt.service.branch." +
+      "OpenClose\"o\n\010Location\0229\n\013coordinates\030\001 \001" +
+      "(\0132$.com.sixt.service.branch.Coordinates" +
+      "\022\020\n\010timeZone\030\002 \001(\t\022\026\n\016timeZoneOffset\030\003 \001" +
+      "(\t\"i\n\007Company\022\021\n\tcompanyId\030\001 \001(\003\022\014\n\004name" +
+      "\030\002 \001(\t\022\025\n\raddressFormat\030\003 \001(\t\022\016\n\006locale\030" +
+      "\005 \001(\t\022\026\n\016usFranchiseeId\030\006 \001(\003\"\202\001\n\017Servic" +
+      "ePostcode\0221\n\007carType\030\001 \001(\0162 .com.sixt.se" +
+      "rvice.branch.CarType\022\023\n\013countryCode\030\002 \001(" +
+      "\t\022\022\n\npostalCode\030\003 \001(\t\022\023\n\013isExclusive\030\004 \001" +
+      "(\010*W\n\022FastLaneBranchType\022\016\n\nNoFastLane\020\000" +
+      "\022\n\n\006Hybrid\020\001\022\022\n\016VirtualImplant\020\002\022\021\n\rVirt" +
+      "ualPublic\020\003*\205\001\n\021OnlineCheckInType\022$\n Onl" +
+      "ineCheckInTypeNoOnlineCheckIn\020\000\022%\n!Onlin" +
+      "eCheckInTypeNoExpressCounter\020\001\022#\n\037Online" +
+      "CheckInTypeExpressCounter\020\002*\333\002\n\nBranchTy" +
+      "pe\022\023\n\017BranchTypeOther\020\000\022\025\n\021BranchTypeAir" +
+      "port\020\001\022\032\n\026BranchTypeTrainStation\020\002\022\026\n\022Br" +
+      "anchTypeDowntown\020\003\022\023\n\017BranchTypeAAFES\020\004\022" +
+      "\025\n\021BranchTypeImplant\020\005\022\036\n\032BranchTypeLimo" +
+      "usineService\020\006\022\032\n\026BranchTypeADACPartners" +
+      "\020\007\022\032\n\026BranchTypeRepairCenter\020\010\022\037\n\033Branch" +
+      "TypeInternalWithFleet\020\t\022,\n(BranchTypeBah" +
+      "nAndMietwagenServicestation\020\n\022\032\n\026BranchT" +
+      "ypeCGSalesPoint\020\013*\221\004\n\013ContactType\022\024\n\020Con" +
+      "tactTypeOther\020\000\022\037\n\033ContactTypeEmergencyS" +
+      "ervice\020\001\022\037\n\033ContactTypeAgencySupervisor\020" +
+      "\002\022\033\n\027ContactTypeFleetManager\020\003\022\034\n\030Contac" +
+      "tTypeBranchManager\020\004\022\033\n\027ContactTypeLostA" +
+      "ndFound\020\005\022\036\n\032ContactTypeYieldMonitoring\020" +
+      "\006\022\034\n\030ContactTypePhoneInternal\020\007\022\033\n\027Conta" +
+      "ctTypeTruckManager\020\010\022\032\n\026ContactTypePhone" +
+      "Public\020\t\022\037\n\033ContactTypeHeadOfDepartment\020" +
+      "\n\022!\n\035ContactTypeReservationRequest\020\013\022\022\n\016" +
+      "ContactTypeCEO\020\014\022\031\n\025ContactTypeSuperviso" +
+      "r\020\r\022\036\n\032ContactTypeCustomerService\020\016\022\022\n\016C" +
+      "ontactTypeIFM\020\017\022\033\n\027ContactTypeHeadOfRegi" +
+      "on\020\020\022\027\n\023ContactTypeStandard\020\021*\211\002\n\007CarTyp" +
+      "e\022\025\n\021CarTypeMotorcyles\020\000\022\024\n\020CarTypeMinib" +
+      "uses\020\001\022\027\n\023CarTypeConvertibles\020\002\022\021\n\rCarTy" +
+      "peEBikes\020\003\022\020\n\014CarTypeJeeps\020\004\022\035\n\031CarTypeV" +
+      "ansAndLightTrucks\020\005\022\030\n\024CarTypePassengerC" +
+      "ars\020\006\022\030\n\024CarTypeTrailerTrucks\020\007\022\030\n\024CarTy" +
+      "peVansAndTrucks\020\010\022\017\n\013CarTypeVans\020\t\022\025\n\021Ca" +
+      "rTypeLuxuryCars\020\n*\372\001\n\rDirectionType\022\024\n\020O" +
+      "utOfHoursReturn\020\000\022\022\n\016ExpressCounter\020\001\022\022\n" +
+      "\016StationParking\020\002\022\025\n\021LocationDirection\020\003" +
+      "\022\021\n\rPrearrivalSMS\020\004\022\020\n\014PrereturnSMS\020\005\022\016\n" +
+      "\nShuttleURL\020\006\022\023\n\017CustomerParking\020\007\022\024\n\020Ou" +
+      "tOfHoursPickup\020\010\022\013\n\007Shuttle\020\t\022\023\n\017FastLan" +
+      "eParking\020\n\022\022\n\016OtherDirection\020\013*\205\001\n\010HintT" +
+      "ype\022\017\n\013UnknownHint\020\000\022\027\n\023OfferListConfigH" +
+      "int\020\001\022\027\n\023PersonalDetailsHint\020\002\022\037\n\033Reserv" +
+      "ationConfirmationHint\020\003\022\025\n\021StationSearch" +
+      "Hint\020\004*\215\004\n\016ExternalIdType\022\013\n\007Unknown\020\000\022\013" +
+      "\n\007Amadeus\020\001\022\010\n\004Toma\020\002\022\017\n\013AmadeusLong\020\003\022\016" +
+      "\n\nGdsAirport\020\004\022\022\n\016GdsAirportLong\020\005\022\017\n\013Gd" +
+      "sTerminal\020\006\022\023\n\017GdsTerminalLong\020\007\022\022\n\016GdsT" +
+      "erminalOff\020\010\022\026\n\022GdsTerminalOffLong\020\t\022\022\n\016" +
+      "GdsRailStation\020\n\022\026\n\022GdsRailStationLong\020\013" +
+      "\022\021\n\rGdsCityCenter\020\014\022\025\n\021GdsCityCenterLong" +
+      "\020\r\022\017\n\013GdsCityEast\020\016\022\023\n\017GdsCityEastLong\020\017" +
+      "\022\020\n\014GdsCityNorth\020\020\022\024\n\020GdsCityNorthLong\020\021" +
+      "\022\020\n\014GdsCitySouth\020\022\022\024\n\020GdsCitySouthLong\020\023" +
+      "\022\017\n\013GdsCityWest\020\024\022\023\n\017GdsCityWestLong\020\025\022\014" +
+      "\n\010GdsHotel\020\026\022\020\n\014GdsHotelLong\020\027\022\013\n\007GdsPor" +
+      "t\020\030\022\017\n\013GdsPortLong\020\031\022\r\n\tGdsResort\020\032\022\021\n\rG" +
+      "dsResortLong\020\033*V\n\nDelColType\022\030\n\024DelColTy" +
+      "peNotAllowed\020\000\022\025\n\021DelColTypeAllowed\020\001\022\027\n" +
+      "\023DelColTypeMandatory\020\002*f\n\016OutOfHoursType" +
+      "\022\034\n\030OutOfHoursTypeNotAllowed\020\000\022\031\n\025OutOfH" +
+      "oursTypeAllowed\020\001\022\033\n\027OutOfHoursTypeOnReq" +
+      "uest\020\002*\314\001\n\005Brand\022\r\n\tBrandSixt\020\000\022\036\n\032Brand" +
+      "AssuredVehicleRentals\020\001\022\016\n\nBrandBoels\020\002\022" +
+      "\025\n\021BrandBPGasStation\020\003\022\030\n\024BrandFMGSuppor" +
+      "tGroup\020\004\022\020\n\014BrandNexusUK\020\005\022\020\n\014BrandThrif" +
+      "ty\020\006\022\017\n\013BrandUnited\020\007\022\017\n\013BrandFlizzr\020\010\022\r" +
+      "\n\tBrandAudi\020\t2\205\007\n\006Branch\022g\n\006Search\022,.com" +
+      ".sixt.service.branch.BranchSearchRequest" +
+      "\032-.com.sixt.service.branch.BranchSearchR" +
+      "esponse\"\000\022^\n\003Get\022).com.sixt.service.bran" +
+      "ch.BranchGetRequest\032*.com.sixt.service.b" +
+      "ranch.BranchGetResponse\"\000\022g\n\006GetAll\022,.co" +
+      "m.sixt.service.branch.BranchGetAllReques" +
+      "t\032-.com.sixt.service.branch.BranchGetAll" +
+      "Response\"\000\022{\n\020GetAllCompressed\022,.com.six" +
+      "t.service.branch.BranchGetAllRequest\0327.c" +
+      "om.sixt.service.branch.BranchGetAllCompr" +
+      "essedResponse\"\000\022\246\001\n\033ValidatePickupAndRet" +
+      "urnTime\022A.com.sixt.service.branch.Branch" +
+      "ValidatePickupAndReturnTimeRequest\032B.com" +
+      ".sixt.service.branch.BranchValidatePicku" +
+      "pAndReturnTimeResponse\"\000\022\205\001\n\020GetByExtern" +
+      "alIds\0226.com.sixt.service.branch.BranchGe" +
+      "tByExternalIdsRequest\0327.com.sixt.service" +
+      ".branch.BranchGetByExternalIdsResponse\"\000" +
+      "\022\232\001\n\035GetDeliveryCollectionBranches\022:.com" +
+      ".sixt.service.branch.DeliveryCollectionB" +
+      "ranchesRequest\032;.com.sixt.service.branch" +
+      ".DeliveryCollectionBranchesResponse\"\000B9\n" +
+      "\033com.sixt.service.branch.apiP\000Z\030/com_six" +
+      "t_service_branchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -47313,105 +50002,117 @@ public final class BranchOuterClass {
     internal_static_com_sixt_service_branch_BranchObject_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_BranchObject_descriptor,
-        new java.lang.String[] { "BranchId", "Type", "IataCode", "Name", "Locale", "Brands", "RegionIds", "ExternalIds", "Delivery", "Collection", "CarTypes", "Addresses", "Contacts", "OpeningTimes", "Status", "Company", "Location", "FastLane", "Hints", "Fleet", "IsSixtUnlimited", "IsMeetAndGreet", "IsFlightNumberMandatory", "Directions", "IsVehicleRecommendationEnabled", "RequiresAddressAndPayment", "RequiresResidenceCountry", "IsAddition", "IsOutsideOfAirport", "Is24HoursOnCall", "Regions", "IsBasicVehicleSelectionPossible", "ShuttleInformation", "IsCorporate", "WinterTime", "GooglePlaceIds", "RateRegion", "DeliveryAdvanceBookingTime", "HasDiamondLounge", "OnlineCheckIn", });
-    internal_static_com_sixt_service_branch_ShuttleInformation_descriptor =
+        new java.lang.String[] { "BranchId", "Type", "IataCode", "Name", "Locale", "Brands", "RegionIds", "ExternalIds", "Delivery", "Collection", "CarTypes", "Addresses", "Contacts", "OpeningTimes", "Status", "Company", "Location", "FastLane", "Hints", "Fleet", "IsSixtUnlimited", "IsMeetAndGreet", "IsFlightNumberMandatory", "Directions", "IsVehicleRecommendationEnabled", "RequiresAddressAndPayment", "RequiresResidenceCountry", "IsAddition", "IsOutsideOfAirport", "Is24HoursOnCall", "Regions", "IsBasicVehicleSelectionPossible", "ShuttleInformation", "IsCorporate", "WinterTime", "GooglePlaceIds", "RateRegion", "DeliveryAdvanceBookingTime", "HasDiamondLounge", "OnlineCheckIn", "Keybooths", });
+    internal_static_com_sixt_service_branch_Keybooth_descriptor =
       getDescriptor().getMessageTypes().get(21);
+    internal_static_com_sixt_service_branch_Keybooth_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sixt_service_branch_Keybooth_descriptor,
+        new java.lang.String[] { "Id", "Name", "OpeningHours", "AddressDetails", });
+    internal_static_com_sixt_service_branch_AddressDetails_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_com_sixt_service_branch_AddressDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_sixt_service_branch_AddressDetails_descriptor,
+        new java.lang.String[] { "Address", "Coordinates", "Directions", });
+    internal_static_com_sixt_service_branch_ShuttleInformation_descriptor =
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_sixt_service_branch_ShuttleInformation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_ShuttleInformation_descriptor,
         new java.lang.String[] { "ShuttleType", "ShuttleText", });
     internal_static_com_sixt_service_branch_WinterTime_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_sixt_service_branch_WinterTime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_WinterTime_descriptor,
         new java.lang.String[] { "Start", "End", });
     internal_static_com_sixt_service_branch_Fleet_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_sixt_service_branch_Fleet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Fleet_descriptor,
         new java.lang.String[] { "Pool", "Region", "VehicleSaleType", });
     internal_static_com_sixt_service_branch_Region_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_sixt_service_branch_Region_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Region_descriptor,
         new java.lang.String[] { "RegionID", "Name", });
     internal_static_com_sixt_service_branch_Pool_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_com_sixt_service_branch_Pool_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Pool_descriptor,
         new java.lang.String[] { "PoolID", "Name", });
     internal_static_com_sixt_service_branch_Hint_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_com_sixt_service_branch_Hint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Hint_descriptor,
         new java.lang.String[] { "HintType", "CarType", "Text", });
     internal_static_com_sixt_service_branch_FastLane_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_com_sixt_service_branch_FastLane_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_FastLane_descriptor,
         new java.lang.String[] { "IsOpen247", "HasFastRent", "IsAvailableOutOfHours", "ReturnToFastLaneOnly", "SkipTurnaround", "IsRefuelingFree", "DistanceToStation", "MaxUnlockDistance", "ParkingLocation", "BranchType", });
     internal_static_com_sixt_service_branch_ExternalId_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_com_sixt_service_branch_ExternalId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_ExternalId_descriptor,
         new java.lang.String[] { "Type", "ExternalId", });
     internal_static_com_sixt_service_branch_Contact_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_com_sixt_service_branch_Contact_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Contact_descriptor,
         new java.lang.String[] { "Type", "FirstName", "LastName", "Email", "Fax", "Mobile", "Telephone", });
     internal_static_com_sixt_service_branch_Direction_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_com_sixt_service_branch_Direction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Direction_descriptor,
         new java.lang.String[] { "Type", "Title", "Text", });
     internal_static_com_sixt_service_branch_Status_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_com_sixt_service_branch_Status_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Status_descriptor,
         new java.lang.String[] { "Active", "Bookable", "Channels", "IsVirtual", });
     internal_static_com_sixt_service_branch_OpenClose_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_com_sixt_service_branch_OpenClose_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_OpenClose_descriptor,
         new java.lang.String[] { "Open", "Close", });
     internal_static_com_sixt_service_branch_OpeningTimes_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_com_sixt_service_branch_OpeningTimes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_OpeningTimes_descriptor,
         new java.lang.String[] { "OpeningHours", "OutOfHours", "Holidays", });
     internal_static_com_sixt_service_branch_OpeningHours_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_com_sixt_service_branch_OpeningHours_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_OpeningHours_descriptor,
         new java.lang.String[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Holiday", });
     internal_static_com_sixt_service_branch_Location_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_com_sixt_service_branch_Location_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Location_descriptor,
         new java.lang.String[] { "Coordinates", "TimeZone", "TimeZoneOffset", });
     internal_static_com_sixt_service_branch_Company_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_com_sixt_service_branch_Company_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_Company_descriptor,
         new java.lang.String[] { "CompanyId", "Name", "AddressFormat", "Locale", "UsFranchiseeId", });
     internal_static_com_sixt_service_branch_ServicePostcode_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_com_sixt_service_branch_ServicePostcode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_sixt_service_branch_ServicePostcode_descriptor,

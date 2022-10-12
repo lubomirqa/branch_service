@@ -1,5 +1,5 @@
 goorange:
-  registry: "consul"
+  registry: "platform"
   configuration:
     enabled: false
   auth:

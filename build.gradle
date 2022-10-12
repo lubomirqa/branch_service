@@ -2,7 +2,6 @@ plugins {
     id "java"
     id "idea"
     id "org.springframework.boot" version "2.7.2"
-    id 'com.sixt.gradle.java-dependency-manifest' version '1.0.0'
 }
 repositories {
     mavenCentral()

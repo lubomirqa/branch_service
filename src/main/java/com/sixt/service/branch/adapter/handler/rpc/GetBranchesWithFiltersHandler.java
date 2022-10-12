@@ -24,8 +24,8 @@ public final class GetBranchesWithFiltersHandler
     public SearchOnlineOuterClass.BranchesResponse handleRequest(SearchOnlineOuterClass.FilteringParameters request,
             OrangeContext ctx) {
         LOG.info("Get GetBranchesWithFilters request received: " + request);
-        //return SearchOnlineOuterClass.BranchesResponse.newBuilder().build();
-                return SearchOnlineOuterClass.BranchesResponse.newBuilder()
+        return SearchOnlineOuterClass.BranchesResponse.newBuilder().build();
+                /*return SearchOnlineOuterClass.BranchesResponse.newBuilder()
                         .addBranches(BranchOuterClass.BranchObject.newBuilder()
                                 .setBranchId(411)
                                 .setName("Aachen 24h")
@@ -37,6 +37,6 @@ public final class GetBranchesWithFiltersHandler
                                                 .build())
                                         .build())
                                 .build())
-                        .build();
+                        .build();*/
     }
 }
